@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: url(neon-background.jpg);
+        }
+        canvas{
+            box-shadow: rgb(0, 0, 0) 40px 40px 80px;
+        }
+        h1{
+            animation: shake 4s linear infinite;
+            color: aqua;
+            text-decoration: underline;
+            font-size: 30px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+
+        @keyframes shake {
+            0% {
+                transform: translateX(0px);
+            }
+            25%{
+                transform: translateY(30px);
+            }
+            50%{
+                transform: translateX(-110px);
+            }
+            75%{
+                transform: translateY(-30px);
+                transform: translateX(90px);
+            }
+            100% {
+                transform: translateX(0px);
+                transform: translateY(0px);
+        }
+    }
+
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Snake</h1>
+    </div>
+
+    <canvas id="game" width="780" height="780"></canvas>
+    <script src="index.js"></script>
+    
+</body>
+</html>
